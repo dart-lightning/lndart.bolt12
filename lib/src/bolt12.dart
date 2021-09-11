@@ -8,7 +8,7 @@ import 'core/bolt12_encoder.dart';
 // Dart implementation of BOLT12
 // this class is the interface of the BOLT12, and it should contains
 // all the method to make operation specified in the BOLT12
-class Bolt12 {
+abstract class Bolt12 {
   // hrp it is the prefix of the bol12
   // - "lno" -> An offers
   // - "lnr" -> An invoice request
@@ -45,7 +45,5 @@ class Bolt12 {
   }
 
   // Create a bolt12
-  Bolt12 create() {
-    return this;
-  }
+  Bolt12 create();
 }
